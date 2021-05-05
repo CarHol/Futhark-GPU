@@ -6,6 +6,8 @@ There are no pre-built tarballs or container registry entries maintained at the 
 
 ``` docker build https://github.com/CarHol/Futhark-GPU.git -t carhol/futhark-gpu ```
 
+Or clone the repo and make your own edits (or none) before building locally.
+
 ## Basic usage
 The default source directory in the container is `/src` - your host sources directory can be mounted as a volume to this directory. You can either use a container interactively for experimentation or as part of your build chain. To try out Futhark interactively:
 
