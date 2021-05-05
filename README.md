@@ -9,4 +9,4 @@ There are no pre-built tarballs or container registry entries maintained at the 
 ## Basic usage
 You can either use a container interactively for experimentation or as part of your build chain. To try out Futhark interactively:
 
-```docker run -it carhol/futhark-gpu futhark repl```
+```docker run -it --gpus all carhol/futhark-gpu futhark repl```
