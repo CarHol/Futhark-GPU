@@ -7,6 +7,12 @@ There are no pre-built tarballs or container registry entries maintained at the 
 ``` docker build https://github.com/CarHol/Futhark-GPU.git -t carhol/futhark-gpu ```
 
 ## Basic usage
-You can either use a container interactively for experimentation or as part of your build chain. To try out Futhark interactively:
+The default source directory in the container is `/src` - your host sources directory can be mounted as a volume to this directory. You can either use a container interactively for experimentation or as part of your build chain. To try out Futhark interactively:
 
 ```docker run -it --gpus all carhol/futhark-gpu futhark repl```
+
+To use Futhark from an interactive bash session, where you can compile and test your project from a terminal:
+
+```docker run -it --gpus all -v /path/on/host:/src -w src carhol/futhark-gpu bash```
+
+From the interactive shell, you can then confirm that all source files are found and build them using `futhark cuda` or `futhark opencl`.
