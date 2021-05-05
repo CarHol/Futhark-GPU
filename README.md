@@ -15,6 +15,6 @@ To use Futhark from an interactive bash session, where you can compile and test 
 
 ```docker run -it --gpus all -v /path/on/host:/src -w src carhol/futhark-gpu bash```
 
-From the interactive shell, you can then confirm that all source files are found and build them using `futhark cuda` or `futhark opencl`.
+From the interactive shell, you can then confirm that all source files are found and build them using `futhark cuda`, `futhark opencl` or any other compiler version you prefer.
 
 If you don't have a compatible GPU or `nvidia-docker` installation, you can omit the `--gpus all` argument to run the container in CPU mode.
