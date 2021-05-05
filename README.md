@@ -13,7 +13,7 @@ The default source directory in the container is `/src` - your host sources dire
 
 To use Futhark from an interactive bash session, where you can compile and test your project from a terminal:
 
-```docker run -it --gpus all -v /path/on/host:/src -w src carhol/futhark-gpu bash```
+```docker run -it --gpus all -v /path/on/host:/src -w /src carhol/futhark-gpu bash```
 
 From the interactive shell, you can then confirm that all source files are found and build them using `futhark cuda`, `futhark opencl` or any other compiler version you prefer.
 
