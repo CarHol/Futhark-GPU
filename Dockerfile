@@ -14,7 +14,7 @@ RUN apt install -y ocl-icd-opencl-dev
 # Install Haskell and stack
 RUN curl -sSL https://get.haskellstack.org/ | sh
 
-# Install Futhark
+# Install Futhark to bin
 ENV PATH="/root/local/bin:$PATH"
 RUN mkdir /temp && \
     cd /temp && \
