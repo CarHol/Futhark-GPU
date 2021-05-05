@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.3.0-base-ubuntu20.04
+FROM nvidia/cuda:11.3.0-devel-ubuntu20.04
 
 # Install basics
 RUN apt update && \
@@ -22,3 +22,12 @@ RUN mkdir /temp && \
     tar -xf ./futhark-nightly-linux-x86_64.tar.xz && \
     cd futhark-nightly-linux-x86_64 && \
     make install
+
+# Create source volume root
+RUN mkdir -p /src
+WORKDIR /src
+
+# Map cuda directories compatible with Futhark
+ENV LIBRARY_PATH=/usr/local/cuda/lib64:$LIBRARY_PATH
+ENV LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
+ENV CPATH=/usr/local/cuda/include:$CPATH
