@@ -22,3 +22,7 @@ From the interactive shell, you can then confirm that all source files are found
 ## CPU mode
 
 If you don't have a compatible GPU or `nvidia-docker` installation, you can omit the `--gpus all` argument to run the container in CPU mode. The CUDA and OpenCL headers and libraries are still available, so you can still use this container to cross-compile for a system with the necessary runtimes.
+
+## License
+
+This is just a Dockerfile, and a pretty basic one at that. You are free to use, copy, edit and distribute it in any way you want without attribution.
