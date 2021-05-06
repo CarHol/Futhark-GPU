@@ -19,4 +19,6 @@ To use Futhark from an interactive bash session, where you can compile and test 
 
 From the interactive shell, you can then confirm that all source files are found and build them using `futhark cuda`, `futhark opencl` or any other compiler version you prefer.
 
-If you don't have a compatible GPU or `nvidia-docker` installation, you can omit the `--gpus all` argument to run the container in CPU mode.
+## CPU mode
+
+If you don't have a compatible GPU or `nvidia-docker` installation, you can omit the `--gpus all` argument to run the container in CPU mode. The CUDA and OpenCL headers and libraries are still available, so you can still use this container to cross-compile for a system with the necessary runtimes.
