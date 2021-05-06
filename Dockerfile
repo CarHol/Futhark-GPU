@@ -5,7 +5,7 @@ RUN apt update && \
     apt upgrade -y && \
     apt install -y wget curl git
 
-# Instal build dependencies
+# Install build dependencies
 RUN apt install -y libtinfo-dev libgmp-dev
 
 # Install OpenCL
